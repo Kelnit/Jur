@@ -1,6 +1,7 @@
-from django.contrib import admin
 from django.urls import path
+from buku.views import AuthorCollection, BookCollection
 
 urlpatterns = [
-  path('admin/', admin.site.urls),
+  path('authors/', AuthorCollection.as_view()),
+  path('books/', BookCollection.as_view()),
 ]
